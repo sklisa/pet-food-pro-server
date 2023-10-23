@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 import pymongo
@@ -8,6 +9,7 @@ import time
 
 logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 app = Flask(__name__)
+CORS(app)
 
 # Connect to MongoDB
 MONGO_PASSWORD = os.getenv('MONGO_PASSWORD')
