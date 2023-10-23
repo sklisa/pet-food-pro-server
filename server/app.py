@@ -86,7 +86,7 @@ def put_feedback():
 
 if __name__ == '__main__':
     # Deployment
-    # app.run()
+    app.run()
     # Local
-    app.run(host='127.0.0.1', port=9874, debug=True)
+    # app.run(host='127.0.0.1', port=9874, debug=True)
 
